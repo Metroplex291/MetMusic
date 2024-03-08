@@ -226,9 +226,9 @@ class HelpCog(commands.Cog, name="Help"):
                 cmdlst[category_icon][1].append(cmd)
 
             elif not cmd.cog or not hasattr(cmd.cog, 'name') or len(cmd.cog.get_commands()) < 2:
-                if not "🔰" in cmdlst:
-                    cmdlst["🔰"] = ("Miscellaneous", [])
-                cmdlst["🔰"][1].append(cmd)
+                if not "⚙️" in cmdlst:
+                    cmdlst["⚙️"] = ("Miscellaneous", [])
+                cmdlst["⚙️"][1].append(cmd)
 
             else:
                 if not cmd.cog.emoji:
@@ -327,7 +327,7 @@ class HelpCog(commands.Cog, name="Help"):
         else:
             cog = ctx.bot.get_cog(cmd.cog_name)
             name = cog.name if hasattr(cog, "name") else "Miscellaneous"
-            emoji = cog.emoji if hasattr(cog, "emoji") else "🔰"
+            emoji = cog.emoji if hasattr(cog, "emoji") else "⚙️"
 
             cmds = [c for c in sorted(cog.get_commands(), key=lambda cm: cm.name) if await check_perms(ctx, c) or not c.hidden]
             try:

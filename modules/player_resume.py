@@ -486,7 +486,7 @@ class PlayerSession(commands.Cog):
             if started:
                 player.set_command_log(
                     text="The player data was successfully restored!",
-                    emoji="🔰"
+                    emoji="⚙️"
                 )
                 player.update = True
 
@@ -501,7 +501,7 @@ class PlayerSession(commands.Cog):
 
                 player.set_command_log(
                     text="The player was successfully restored!",
-                    emoji="🔰"
+                    emoji="⚙️"
                 )
 
                 try:
